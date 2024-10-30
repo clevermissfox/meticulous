@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import BtnIcon from "./BtnIcon";
+import ExpandedBtnIcon from "./ExpandedBtnIcon";
 
 export default function Header() {
   return (
@@ -20,10 +21,26 @@ export default function Header() {
               ></i>
             </button>
           </div> */}
-
-          <BtnIcon label="Search" iconClass="fa-magnifying-glass" />
-          <BtnIcon label="Checkout" iconClass="fa-cart-shopping" />
-          <BtnIcon label="Login" iconClass="fa-user" />
+          <ExpandedBtnIcon label="Search" iconClass="fa-magnifying-glass">
+            <label className="small">
+              <p className="visually-hidden">Search Meticulous Manicurist</p>
+              <input
+                type="search"
+                placeholder="Search"
+                className="search-bar-input"
+              />
+            </label>
+          </ExpandedBtnIcon>
+          <BtnIcon
+            label="Checkout"
+            iconClass="fa-cart-shopping"
+            btnClass={"btn-icon btn-primary"}
+          />
+          <BtnIcon
+            label="Login"
+            iconClass="fa-user"
+            btnClass={"btn-icon btn-primary"}
+          />
         </div>
         <NavLink to="/" className="margin-i-auto ta-cen logo-wrapper">
           <img

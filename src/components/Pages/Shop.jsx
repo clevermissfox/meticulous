@@ -1,5 +1,5 @@
 import ProductItem from "../Products/ProductItem";
-import Sidebar from "../Sidebar";
+import Sidebar from "../Utilities/Sidebar";
 
 export default function Shop() {
   return (

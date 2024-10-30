@@ -24,7 +24,7 @@ export default function ProductItem({ name, price, img }) {
           </button>
           <BtnIcon
             label="Add to Cart"
-            btnClass="btn-add_to_cart"
+            btnClass="btn-add_to_cart btn-icon btn-primary"
             iconSize="fa-sm"
             iconClass="fa-cart-plus"
           />

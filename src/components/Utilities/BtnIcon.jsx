@@ -1,4 +1,5 @@
 export default function BtnIcon({
+  onClick = null,
   label,
   btnClass,
   iconWeight = "fas",
@@ -7,9 +8,10 @@ export default function BtnIcon({
 }) {
   return (
     <button
+      onClick={onClick}
       aria-label={label}
       title={label}
-      className={`btn-icon btn-primary ${(btnClass ?? "") && ` ${btnClass}`}`}
+      className={`${(btnClass ?? "") && ` ${btnClass}`}`}
     >
       <i
         className={`${iconWeight} ${iconSize} ${iconClass}`}
