@@ -7,20 +7,6 @@ export default function Header() {
     <header className="padding-1">
       <div className="wrapper">
         <div className="icons-wrapper row jc-end gap-half ai-cen">
-          {/* <div class="search-bar-wrapper">
-            <input
-              type="text"
-              aria-label="search"
-              placeholder="Search"
-              className="search-bar-input"
-            />
-            <button aria-label="Search" title="Search" className="btn-search">
-              <i
-                className="fas fa-sm fa-magnifying-glass"
-                aria-hidden="true"
-              ></i>
-            </button>
-          </div> */}
           <ExpandedBtnIcon label="Search" iconClass="fa-magnifying-glass">
             <label className="small">
               <p className="visually-hidden">Search Meticulous Manicurist</p>
@@ -31,18 +17,21 @@ export default function Header() {
               />
             </label>
           </ExpandedBtnIcon>
-          <BtnIcon
-            label="Checkout"
-            iconClass="fa-cart-shopping"
-            btnClass={"btn-icon btn-primary"}
-          />
-          <BtnIcon
-            label="Login"
-            iconClass="fa-user"
-            btnClass={"btn-icon btn-primary"}
-          />
+          <ExpandedBtnIcon label="Cart" iconClass="fa-cart-shopping">
+            <a href="/" className="small">
+              Cart
+            </a>
+          </ExpandedBtnIcon>
+          <ExpandedBtnIcon label="Login" iconClass="fa-user">
+            <a href="/" className="small">
+              Login
+            </a>
+          </ExpandedBtnIcon>
         </div>
-        <NavLink to="/" className="margin-i-auto ta-cen logo-wrapper">
+        <NavLink
+          to="/"
+          className="margin-i-auto margin-bs-2 ta-cen logo-wrapper"
+        >
           <img
             src="images/meticulous_logo.png"
             alt="Meticulous Manicurist Logo"
@@ -61,7 +50,7 @@ export default function Header() {
               <NavLink to="/training">Training</NavLink>
             </li>
             <li>
-              <NavLink to="/contact">Appointments</NavLink>
+              <NavLink to="/appointments">Appointments</NavLink>
             </li>
           </ul>
         </nav>

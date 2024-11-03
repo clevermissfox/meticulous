@@ -26,7 +26,7 @@ export default function Footer() {
                 <Link to="/training">Training</Link>
               </li>
               <li>
-                <Link to="/contact">Appointments</Link>
+                <Link to="/appointments">Appointments</Link>
               </li>
               <li>
                 <Link to="/map">Network Map</Link>

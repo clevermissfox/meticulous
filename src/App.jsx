@@ -6,6 +6,7 @@ import About from "./components/Pages/About";
 import Salon from "./components/Pages/Salon";
 import Contact from "./components/Pages/Contact";
 import Error404 from "./components/Pages/Error404";
+import Appointments from "./components/Pages/Appointments";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
       { index: true, element: <Shop /> },
       { path: "about", element: <About /> },
       { path: "about/salon", element: <Salon /> },
+      { path: "appointments", element: <Appointments /> },
       { path: "contact", element: <Contact /> },
       { path: "*", element: <Error404 /> },
     ],

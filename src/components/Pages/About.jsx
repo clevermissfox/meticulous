@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import Slideshow from "../Utilities/Slideshow";
 
 export default function About() {
   return (
@@ -44,7 +44,17 @@ export default function About() {
             </a>
             , which went on to save my career.
           </p>
+          <p className="margin-bs-1">
+            I support the education, growth, and collaboration of nail
+            technicians and nail lovers all over the world through tutorials. I
+            hope to enrich perception and attitudes to create connections
+            between nail tech and clients, by teaching there is more to this
+            industry than just doing nails.
+          </p>
         </div>
+        <section className="margin-bs-2">
+          <Slideshow />
+        </section>
       </section>
     </>
   );
