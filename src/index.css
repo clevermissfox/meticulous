@@ -1116,6 +1116,30 @@ footer {
 }
 
 /* MARK: Pages */
+/* Popup */
+.popup[open] {
+  padding: var(--padding-default);
+  border-radius: var(--br-default);
+  border: none;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-inline: auto;
+
+  &::backdrop {
+    background-color: oklch(0% 0 0 / 50%);
+  }
+
+  & [btn-close] {
+    top: 1em;
+    right: 1em;
+    transition: scale var(--default-trans-dur), color var(--default-trans-dur);
+
+    &:is(:hover, :focus-visible) {
+      scale: 1.1;
+      color: var(--clr-accent);
+    }
+  }
+}
 
 /* About */
 main .page-about {
