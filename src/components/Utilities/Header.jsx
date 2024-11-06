@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
-import BtnIcon from "./BtnIcon";
 import ExpandedBtnIcon from "./ExpandedBtnIcon";
+import Dropdown from "./Dropdown";
 
 export default function Header() {
   return (
@@ -47,7 +47,13 @@ export default function Header() {
               <NavLink to="/about">About</NavLink>
             </li>
             <li>
-              <NavLink to="/training">Training</NavLink>
+              <Dropdown title="Training">
+                <NavLink to="/training/academy">Nail Academy</NavLink>
+                <NavLink to="/training/classes">Classes</NavLink>
+                <NavLink to="/training/caregiver-training">
+                  Caregiver + Nurses training
+                </NavLink>
+              </Dropdown>
             </li>
             <li>
               <NavLink to="/appointments">Appointments</NavLink>

@@ -648,6 +648,7 @@ button {
   position: absolute;
   top: 0;
   right: 0;
+  line-height: 1;
 }
 
 /* ELEMENT SELECTORS */
@@ -717,6 +718,7 @@ strong {
   color: var(--clr-accent);
   background: var(--_bg-grade) padding-box, var(--_psuedo-border) border-box;
   border: 2px solid transparent;
+
   transition: --grade-start var(--default-trans-dur),
     --grade-end var(--default-trans-dur),
     --grade-border var(--default-trans-dur), color var(--default-trans-dur);
@@ -727,6 +729,22 @@ strong {
     color: var(--clr-neutral-100);
     outline-offset: 2px;
     outline-color: var(--clr-accent);
+  }
+
+  &:is(.btn-primary__inverted) {
+    --grade-start: var(--clr-accent);
+    --grade-end: var(--clr-brand);
+    color: var(--clr-neutral-100);
+    border-radius: var(--br-default);
+    padding: 0.5em 1.2em;
+    text-transform: lowercase;
+
+    &:is(:hover, :focus-visible) {
+      --grade-start: var(--clr-bg-body);
+      --grade-end: var(--clr-bg-body);
+      --grade-border: currentColor;
+      color: var(--clr-accent);
+    }
   }
 }
 
@@ -764,6 +782,30 @@ strong {
 
     @media (width < 500px) {
       flex-grow: 1;
+    }
+  }
+}
+
+.nav-dropdown {
+  position: relative;
+  display: inline-block;
+
+  & .nav-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+
+    & a {
+      display: block;
+      padding: 0.25em 0.5em;
+
+      &:is(:hover, :focus-visible) {
+        background-color: #f1f1f1;
+      }
     }
   }
 }
@@ -1122,14 +1164,18 @@ footer {
   border-radius: var(--br-default);
   border: none;
   top: 50%;
+  inset-inline: 1em;
   transform: translateY(-50%);
   margin-inline: auto;
+  max-width: 60ch;
 
   &::backdrop {
     background-color: oklch(0% 0 0 / 50%);
   }
 
   & [btn-close] {
+    outline-offset: 2px;
+    outline-color: var(--clr-accent);
     top: 1em;
     right: 1em;
     transition: scale var(--default-trans-dur), color var(--default-trans-dur);
