@@ -620,8 +620,18 @@ button {
   color: var(--clr-accent);
 }
 
+.text-neutral-100 {
+  color: var(--clr-neutral-100);
+}
+
 .bg-accent {
+  --clr-bg-card: var(--clr-accent);
   background-color: var(--clr-accent);
+}
+
+.bg-neutral-100 {
+  --clr-bg-card: var(--clr-neutral-100);
+  background-color: var(--clr-neutral-100);
 }
 
 .display-inline-block {
@@ -691,6 +701,12 @@ strong {
 /* PROJECT SPECIFIC STYLES */
 
 /* MARK: Reusable Components */
+.root-grid {
+  display: grid;
+  grid-template-areas:
+    [full-start] minmax(1em, 1fr) [content-start] minmax(min(100%, 100ch), 1fr)
+    [content-end] minmax(1em, 1fr) [full-end];
+}
 
 .hide {
   scale: 0;
@@ -703,11 +719,13 @@ strong {
 
 .wrapper {
   width: min(100%, 100ch);
+  /* grid-area: content; */
   margin-inline: auto;
 }
 
 .card {
-  background-color: var(--clr-bg-card);
+  --_card-bg: var(--clr-bg-card);
+  background-color: var(--_card-bg);
   padding: var(--padding-default);
   border-radius: var(--br-default);
 }
@@ -1237,6 +1255,36 @@ main .page-404 h1 {
 
     &:is(:hover, :focus-visible) {
       --grade-border: currentColor;
+    }
+  }
+}
+
+/* Academy */
+.page-academy {
+  & h1 span.lowercase {
+    font-size: 0.85em;
+  }
+
+  & ul.row {
+    counter-reset: methods-counter;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 30ch), 1fr));
+
+    & li.card {
+      flex: 1;
+      flex-basis: min(100%, 30ch);
+      & h3 {
+        counter-increment: methods-counter;
+        font-size: calc(var(--fs-h3) + 0.25rem);
+
+        &::before {
+          content: counter(methods-counter, decimal-leading-zero);
+          display: block;
+          font-variant-numeric: tabular-nums;
+          font-size: 2.5em;
+          color: var(--clr-accent);
+          line-height: 0.8em;
+        }
+      }
     }
   }
 }

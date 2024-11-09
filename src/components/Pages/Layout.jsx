@@ -8,7 +8,6 @@ import Popup from "./Popup";
 export default function Layout() {
   const [bannerIsOpen, setBannerIsOpen] = useState(true);
   const popupRef = useRef(null);
-  // const [popupIsOpen, setPopupIsOpen] = useState(false);
 
   function handleBannerClose() {
     setBannerIsOpen(false);

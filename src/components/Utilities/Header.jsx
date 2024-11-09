@@ -33,7 +33,7 @@ export default function Header() {
           className="margin-i-auto margin-bs-2 ta-cen logo-wrapper"
         >
           <img
-            src="images/meticulous_logo.png"
+            src="/images/meticulous_logo.png"
             alt="Meticulous Manicurist Logo"
             width="200px"
           />
