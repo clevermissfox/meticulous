@@ -2,8 +2,8 @@ import Slideshow from "../Utilities/Slideshow";
 
 export default function About() {
   return (
-    <>
-      <section className="page-about">
+    <section className="page-about">
+      <div className="wrapper">
         <h1 className="visually-hidden">About the Meticulous Manicurist</h1>
         <h2>
           From nearly having to end my career, to&shy;
@@ -30,7 +30,6 @@ export default function About() {
             pedicure and manicure knowledge with the world.
           </p>
           <p className="margin-bs-1">
-            {" "}
             As my channel began to grow, I simultaneously put energy into
             developing a hand rest for nails in hopes it would save my career.
             After building the hand rest in my garage, various modifications,
@@ -55,7 +54,7 @@ export default function About() {
         <section className="margin-bs-2">
           <Slideshow />
         </section>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

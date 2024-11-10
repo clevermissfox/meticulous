@@ -56,7 +56,13 @@ export default function Header() {
               </Dropdown>
             </li>
             <li>
-              <NavLink to="/appointments">Appointments</NavLink>
+              <NavLink to="tutorials">Tutorials</NavLink>
+            </li>
+            <li>
+              <Dropdown title="Appointments">
+                <NavLink to="/appointments">Meticulous Appointments</NavLink>
+                <NavLink to="/network-map">Network Map</NavLink>
+              </Dropdown>
             </li>
           </ul>
         </nav>

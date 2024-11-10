@@ -1,3 +1,9 @@
 export default function Classes() {
-  return <p>This is the classes page</p>;
+  return (
+    <section className="page-classes">
+      <div className="wrapper">
+        <p>This is the classes page</p>
+      </div>
+    </section>
+  );
 }

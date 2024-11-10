@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Banner from "../Utilities/Banner";
 import Header from "../Utilities/Header";
 import Footer from "../Utilities/Footer";
@@ -8,6 +8,7 @@ import Popup from "./Popup";
 export default function Layout() {
   const [bannerIsOpen, setBannerIsOpen] = useState(true);
   const popupRef = useRef(null);
+  const location = useLocation();
 
   function handleBannerClose() {
     setBannerIsOpen(false);
@@ -20,14 +21,17 @@ export default function Layout() {
   }
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      if (popupRef.current) {
-        popupRef.current.showModal();
-      }
-    }, 3000); // 3000 milliseconds = 3 seconds
+    if (location.pathname === "/") {
+      // Check if we're on the home page
+      const timer = setTimeout(() => {
+        if (popupRef.current) {
+          popupRef.current.showModal();
+        }
+      }, 3000);
 
-    return () => clearTimeout(timer);
-  }, []);
+      return () => clearTimeout(timer);
+    }
+  }, [location.pathname]); // Add location.pathname as a dependency
 
   return (
     <>
@@ -36,9 +40,7 @@ export default function Layout() {
       )}
       <Header />
       <main className="padding-1">
-        <div className="wrapper">
-          <Outlet />
-        </div>
+        <Outlet />
       </main>
       <Footer />
       <Popup handlePopupClose={handlePopupClose} popupRef={popupRef} />

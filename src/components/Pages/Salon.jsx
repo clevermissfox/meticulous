@@ -1,3 +1,9 @@
 export default function Salon() {
-  return <p>Salon Page</p>;
+  return (
+    <section className="page-salon">
+      <div className="wrapper">
+        <p>Salon page</p>
+      </div>
+    </section>
+  );
 }

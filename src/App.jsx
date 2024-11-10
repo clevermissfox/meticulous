@@ -10,6 +10,8 @@ import CareTraining from "./components/Pages/CareTraining";
 import Contact from "./components/Pages/Contact";
 import Error404 from "./components/Pages/Error404";
 import Appointments from "./components/Pages/Appointments";
+import Tutorials from "./components/Pages/Tutorials";
+import NetworkMap from "./components/Pages/NetworkMap";
 
 const router = createBrowserRouter([
   {
@@ -22,7 +24,10 @@ const router = createBrowserRouter([
       { path: "training/academy", element: <Academy /> },
       { path: "training/classes", element: <Classes /> },
       { path: "training/caregiver-training", element: <CareTraining /> },
+
       { path: "appointments", element: <Appointments /> },
+      { path: "network-map", element: <NetworkMap /> },
+      { path: "tutorials", element: <Tutorials /> },
       { path: "contact", element: <Contact /> },
       { path: "*", element: <Error404 /> },
     ],
