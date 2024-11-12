@@ -35,7 +35,7 @@ export default function Appointments() {
               <img
                 src="/images/lori-halloway.webp"
                 alt=""
-                className="br-default"
+                className="br-default height-100 cover"
               />
             </div>
           </section>
@@ -49,11 +49,11 @@ export default function Appointments() {
               serviceName="Pedicure Services:"
               children={
                 <>
-                  <p className="margin-bs-1half">
-                    Book ANY 5-minute Deposit Slot. This is NOT your appointment
-                    date. The deposit is applied to the the overall cost of
-                    whichever pedicure service we deem as appropriate for your
-                    feet.
+                  <p>
+                    Book ANY 5-minute Deposit Slot. This is <strong>NOT</strong>{" "}
+                    your appointment date. The deposit is applied to the the
+                    overall cost of whichever pedicure service we deem as
+                    appropriate for your feet.
                   </p>
                   <p className="margin-bs-half">
                     After I review your New Pedicure Client form, I will text
@@ -91,7 +91,7 @@ export default function Appointments() {
               timeAndPrice={"15 minutes @ $30.00"}
               children={
                 <>
-                  <p className="margin-bs-1half">
+                  <p>
                     I look forward to assisting you with your foot care
                     questions, business questions, troubleshooting, and finding
                     a solution for any issue you are having.
@@ -117,10 +117,10 @@ export default function Appointments() {
               }
             />
             <BookingService
-              bookingTitle={"One-on-One Virtual Custom Training"}
+              bookingTitle={"One-on-One Virtual<br/> Custom Training"}
               timeAndPrice={"1 hour @ $100.00"}
               children={
-                <p className="margin-bs-1half">
+                <p>
                   I can help you with any business skills, techniques, and
                   troubleshooting. You will have the opportunity to email me a
                   list of what you would like help with so I can prepare for our
@@ -133,7 +133,7 @@ export default function Appointments() {
               timeAndPrice={"30 minutes @ $30.00"}
               children={
                 <>
-                  <p className="margin-bs-1half">
+                  <p>
                     As much as I would love to answer every email free of
                     charge, the number of emails I receive on a daily basis has
                     made that an unattainable goal. I will be happy to provide
@@ -145,7 +145,7 @@ export default function Appointments() {
                     get to your email, but rest assured you will hear from me.
                     After you make your purchase, send your email to{" "}
                     <a
-                      href="mailto:lori@themeticulousmanicurist.com"
+                      href="mailto:lori@themeticulousmanicurist.com?subject=Email%20Appointment"
                       className="underline"
                     >
                       lori@themeticulousmanicurist.com

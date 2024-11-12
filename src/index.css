@@ -365,6 +365,10 @@ button {
 }
 
 /* TEXT UTILITIES */
+.lh-1 {
+  line-height: var(--lh-1);
+}
+
 .xsmall {
   font-size: 0.75em;
   line-height: var(--lh-1);
@@ -462,6 +466,18 @@ button {
 
 .padding-ie-1half {
   padding-inline-end: 1.5em;
+}
+
+.padding-i-1two {
+  padding-inline: 1.2em;
+}
+
+.padding-is-1two {
+  padding-inline-start: 1.2em;
+}
+
+.padding-ie-1two {
+  padding-inline-end: 1.2em;
 }
 
 .padding-1 {
@@ -735,6 +751,18 @@ button {
   border-radius: var(--br-default);
 }
 
+.height-100 {
+  height: 100%;
+}
+
+.cover {
+  object-fit: cover;
+}
+
+.maxw-fit {
+  max-width: fit-content;
+}
+
 [btn-close] {
   position: absolute;
   top: 0;
@@ -793,7 +821,8 @@ strong {
 }
 
 .wrapper {
-  width: min(100%, 100ch);
+  width: min(100%, 100ch + 2em);
+  padding-inline: 1em;
   margin-inline: auto;
 }
 
@@ -804,12 +833,21 @@ strong {
   border-radius: var(--br-default);
 }
 
+.card-inner {
+  padding: calc(var(--padding-default) - 0.5em);
+  background-color: var(--clr-neutral-100);
+  color: var(--clr-primary);
+  border-radius: var(--br-default);
+}
+
 .btn-primary {
   --_psuedo-border: linear-gradient(var(--grade-border) 0 0);
   --_bg-grade: linear-gradient(var(--grade-start), var(--grade-end));
   color: var(--clr-accent);
   background: var(--_bg-grade) padding-box, var(--_psuedo-border) border-box;
   border: 2px solid transparent;
+  outline-offset: 2px;
+  outline-color: var(--clr-accent);
 
   transition: --grade-start var(--default-trans-dur),
     --grade-end var(--default-trans-dur),
@@ -819,8 +857,6 @@ strong {
     --grade-start: var(--clr-accent);
     --grade-end: var(--clr-brand);
     color: var(--clr-neutral-100);
-    outline-offset: 2px;
-    outline-color: var(--clr-accent);
   }
 
   &:is(.btn-primary__inverted) {
@@ -884,6 +920,11 @@ strong {
       flex-grow: 1;
     }
   }
+}
+
+.form-academy-payment select {
+  outline-color: var(--clr-accent);
+  border-radius: var(--br-default);
 }
 
 .nav-dropdown {
@@ -1319,15 +1360,8 @@ main .page-404 h1 {
   --clr-bg-card: var(--clr-accent);
   color: var(--clr-neutral-100);
 
-  .card-inner {
-    padding: calc(var(--padding-default) - 0.5em);
-    background-color: var(--clr-neutral-100);
-    color: var(--clr-primary);
-    border-radius: var(--br-default);
-
-    & address {
-      font-style: normal;
-    }
+  & address {
+    font-style: normal;
   }
 
   .btn-booking {
@@ -1338,6 +1372,15 @@ main .page-404 h1 {
     &:is(:hover, :focus-visible) {
       --grade-border: currentColor;
     }
+  }
+}
+
+/* Network Map */
+.page-network-map {
+  transition: all var(--default-trans-dur);
+
+  & .map-container iframe {
+    color: hotpink;
   }
 }
 
@@ -1408,6 +1451,68 @@ main .page-404 h1 {
     }
     & li img {
       width: 100%;
+    }
+  }
+}
+
+/* FAQs */
+.page-faq {
+  transition: all var(--default-trans-dur);
+
+  & .faq-list {
+    width: min(100%, 60ch);
+  }
+
+  & .faq-item {
+    display: grid;
+    grid-template-rows: auto 0fr;
+    transition: grid-template-rows var(--default-trans-dur);
+
+    &:is(.faq-item__expanded) {
+      grid-template-rows: auto 1fr;
+    }
+
+    &:not(:is(:first-of-type)) {
+      margin-block-start: 0.5em;
+    }
+
+    & :is(h2 button) {
+      display: block;
+      width: 100%;
+
+      &:is([aria-expanded="false"]) :is(.accordion-title) {
+        border-radius: var(--br-default);
+      }
+
+      &:is([aria-expanded="falstruee"]) :is(.accordion-title) {
+        border-radius: var(--br-default) var(--br-default) 0 0;
+      }
+
+      &:is([aria-expanded="false"]):is(:focus-visible) {
+        outline-offset: 5px;
+        outline-color: var(--clr-accent);
+      }
+    }
+
+    & :is(.accordion-title) {
+      width: 100%;
+      padding: 0.75em;
+      text-align: start;
+      transition: border-radius var(--default-trans-dur);
+
+      & .lg {
+        font-size: 0.8em;
+      }
+    }
+
+    & :is(.accordion-panel) {
+      overflow: hidden;
+      border: 1px solid var(--clr-accent);
+      border-block-start: 0px solid transparent;
+
+      & > div {
+        padding: 0.5em 1em;
+      }
     }
   }
 }

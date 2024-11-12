@@ -9,7 +9,7 @@ export default function BookingService({
 }) {
   return (
     <div className="card card-appointment">
-      <div className="row jc-sb ai-cen gap-half fw-wrap ac-cen">
+      <div className="row jc-sb ai-st gap-half fw-wrap ac-cen">
         <div>
           <p
             className="lg bold title"
@@ -20,11 +20,13 @@ export default function BookingService({
         <button className="btn-primary btn-booking">Book</button>
       </div>
       <div className="card-content">
-        {children}
+        <div className="card-inner margin-bs-1">{children}</div>
         {innerChildren && (
-          <div className="margin-bs-1 card-inner">
-            <p className="lg bold">{serviceName}</p>
-            {innerChildren}
+          <div className="margin-bs-1">
+            <div className="card-inner">
+              <p className="lg bold">{serviceName}</p>
+              {innerChildren}
+            </div>
           </div>
         )}
       </div>

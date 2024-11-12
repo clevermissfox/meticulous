@@ -39,7 +39,7 @@ export default function Layout() {
         <Banner isOpen={bannerIsOpen} handleClose={handleBannerClose} />
       )}
       <Header />
-      <main className="padding-1">
+      <main className="padding-b-1">
         <Outlet />
       </main>
       <Footer />

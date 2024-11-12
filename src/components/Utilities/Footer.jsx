@@ -23,13 +23,13 @@ export default function Footer() {
                 <Link to="/about">About</Link>
               </li>
               <li>
-                <Link to="/training">Training</Link>
+                <Link to="/training/academy">Nail Academy</Link>
               </li>
               <li>
                 <Link to="/appointments">Appointments</Link>
               </li>
               <li>
-                <Link to="/map">Network Map</Link>
+                <Link to="/network-map">Network Map</Link>
               </li>
               <li>
                 <Link to="/contact">Contact</Link>
@@ -40,7 +40,7 @@ export default function Footer() {
             <h3>Info</h3>
             <ul className="margin-bs-quarter">
               <li>
-                <Link to="/faqs">FAQs</Link>
+                <Link to="/faq">FAQs</Link>
               </li>
               <li>
                 <Link to="/nail-school">Nail School Partner Program</Link>
