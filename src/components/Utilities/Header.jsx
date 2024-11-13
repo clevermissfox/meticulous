@@ -4,7 +4,7 @@ import Dropdown from "./Dropdown";
 
 export default function Header() {
   return (
-    <header className="padding-1">
+    <header className="padding-1 bg-accent">
       <div className="wrapper">
         <div className="icons-wrapper row jc-end gap-half ai-cen">
           <ExpandedBtnIcon label="Search" iconClass="fa-magnifying-glass">

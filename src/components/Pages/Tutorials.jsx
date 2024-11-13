@@ -35,7 +35,6 @@ export default function Tutorials() {
 
   useEffect(() => {
     fetchVideos();
-    console.log(videos);
   }, []);
 
   const loadMore = () => {
@@ -55,11 +54,17 @@ export default function Tutorials() {
     });
   };
 
+  function decodeHtmlEntities(text) {
+    const textArea = document.createElement("textarea");
+    textArea.innerHTML = text;
+    return textArea.value;
+  }
+
   return (
     <section className="page-tutorials">
       <div className="wrapper">
         <hgroup>
-          <h1>
+          <h1 className="ta-cen">
             <a
               href="http://www.youtube.com/@meticulousmanicurist"
               target="_blank"
@@ -81,9 +86,12 @@ export default function Tutorials() {
                 <img
                   src={video.snippet.thumbnails.medium.url}
                   alt={video.snippet.title}
+                  className="br-default"
                 />
                 <div className="video-details">
-                  <p className="lg margin-bs-half">{video.snippet.title}</p>
+                  <p className="lg margin-bs-half">
+                    {decodeHtmlEntities(video.snippet.title)}
+                  </p>
                   <p className="small margin-bs-half">
                     {formatDate(video.snippet.publishedAt)}
                   </p>
@@ -95,7 +103,7 @@ export default function Tutorials() {
         {nextPageToken && !loading && (
           <button
             onClick={loadMore}
-            className="btn-primary padding-b-half padding-i-1half margin-i-auto margin-bs-1 display-block"
+            className="btn-primary btn-primary__styled margin-i-auto margin-bs-1 display-block"
           >
             Load More
           </button>

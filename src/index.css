@@ -722,6 +722,10 @@ button {
   background-color: var(--clr-accent);
 }
 
+.bg-grade {
+  background-image: linear-gradient(var(--clr-accent), var(--clr-brand));
+}
+
 .bg-neutral-100 {
   --clr-bg-card: var(--clr-neutral-100);
   background-color: var(--clr-neutral-100);
@@ -761,6 +765,10 @@ button {
 
 .maxw-fit {
   max-width: fit-content;
+}
+
+.minw-fit {
+  min-width: fit-content;
 }
 
 [btn-close] {
@@ -863,9 +871,6 @@ strong {
     --grade-start: var(--clr-accent);
     --grade-end: var(--clr-brand);
     color: var(--clr-neutral-100);
-    border-radius: var(--br-default);
-    padding: 0.5em 1.2em;
-    text-transform: lowercase;
 
     &:is(:hover, :focus-visible) {
       --grade-start: var(--clr-bg-body);
@@ -873,6 +878,12 @@ strong {
       --grade-border: currentColor;
       color: var(--clr-accent);
     }
+  }
+
+  &:is(.btn-primary__styled) {
+    border-radius: var(--br-default);
+    padding: 0.5em 1.2em;
+    text-transform: lowercase;
   }
 }
 
@@ -1001,6 +1012,10 @@ strong {
   }
 }
 
+header {
+  border-block-end: 0.8px solid var(--clr-brand);
+}
+
 @media (width < 550px) {
   header.padding-1 {
     padding-block-end: 0;
@@ -1013,6 +1028,7 @@ strong {
 
 .expanded-btn-wrapper {
   --_size: 3ch;
+  --grade-border: var(--clr-neutral-100);
   --_psuedo-border: linear-gradient(var(--grade-border) 0 0);
   --_bg-grade: linear-gradient(var(--grade-start), var(--grade-end));
   border: 2px solid transparent;
@@ -1024,6 +1040,7 @@ strong {
   grid-template-rows: var(--_size);
   transition: --grade-start var(--default-trans-dur),
     --grade-end var(--default-trans-dur),
+    --grade-border var(--default-trans-dur),
     grid-template-columns var(--default-trans-dur)
       cubic-bezier(0.1, 0.98, 0.49, 1.1),
     width var(--default-trans-dur), all var(--default-trans-dur),
@@ -1038,14 +1055,13 @@ strong {
   }
 
   &:has(:focus-within) {
-    outline: 1px solid var(--clr-accent);
+    outline: 1px solid var(--clr-neutral-100);
     outline-offset: 2px;
   }
 
   &:is(.expanded-btn_expanded) {
+    --grade-border: transparent;
     grid-template-columns: auto auto;
-    /* grid-template-rows: auto;
-    align-self: stretch; */
     border-radius: 100vw;
     padding-inline: 0.5em;
     transition: all var(--default-trans-dur), border-radius 0ms;
@@ -1086,19 +1102,30 @@ strong {
 }
 
 .primary-nav li a {
+  --_clr-hover: var(--clr-neutral-100);
+  --_clr-active: var(--clr-neutral-100);
   text-transform: lowercase;
   transition: color var(--default-trans-dur);
 
   &:is(:hover, :focus-visible) {
-    color: var(--clr-accent);
+    color: var(--_clr-hover);
   }
 
   &:is([aria-current="page"]) {
-    color: var(--clr-accent);
+    color: var(--_clr-active);
     text-decoration: underline;
     text-underline-offset: 2px;
     text-decoration-thickness: 1px;
   }
+
+  &:is(.nav-dropdown-menu > a) {
+    --_clr-hover: var(--clr-accent);
+    --_clr-active: var(--clr-accent);
+  }
+}
+
+main {
+  view-transition-name: main-content;
 }
 
 .shop-wrapper {
@@ -1329,7 +1356,7 @@ footer {
 }
 
 /* About */
-main .page-about {
+.page-about {
   transition: all var(--default-trans-dur);
   & a {
     text-decoration: underline;
@@ -1395,9 +1422,8 @@ main .page-404 h1 {
     font-size: 0.85em;
   }
 
-  & ul.row {
+  & .card > ul.row {
     counter-reset: methods-counter;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 30ch), 1fr));
 
     & li.card {
       flex: 1;
@@ -1415,6 +1441,31 @@ main .page-404 h1 {
           line-height: 0.8em;
         }
       }
+    }
+  }
+
+  & .img-wrapper {
+    aspect-ratio: 1 / 0.75;
+    overflow: hidden;
+    border-radius: var(--br-default);
+
+    & > img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  & .course-item {
+    border-radius: 100vw;
+    text-transform: lowercase;
+    display: flex;
+    gap: 0.5em;
+
+    &::before {
+      content: "\f00c";
+      font-family: var(--ff-secondary);
+      font-size: 0.8em;
     }
   }
 }

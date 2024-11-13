@@ -20,7 +20,7 @@ export default function AcademyPayment() {
         <option value="Purchase Course">Purchase Course</option>
         <option value="Payment Plan">Payment Plan</option>
       </select>
-      <button className="btn-primary btn-primary__inverted btn-payment-options">
+      <button className="btn-primary btn-primary__inverted btn-primary__styled">
         continue
       </button>
     </form>

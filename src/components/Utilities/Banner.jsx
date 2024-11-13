@@ -1,6 +1,6 @@
 export default function Banner({ handleClose }) {
   return (
-    <div className="banner padding-i-1 padding-b-half bg-accent text-white">
+    <div className="banner padding-i-1 padding-b-half ">
       <p className="ta-cen small">
         <a href="#">Schedule a virtual appointment with me</a>
       </p>

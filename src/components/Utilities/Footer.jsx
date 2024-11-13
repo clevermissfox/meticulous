@@ -2,8 +2,10 @@ import { useMemo } from "react";
 import SectionSubscribe from "./SectionSubscribe";
 import SocialMediaIcons from "./SocialMediaIcons";
 import { Link } from "react-router-dom";
+import { useScrollToTop } from "../../hooks/useScrollToTop";
 
 export default function Footer() {
+  const scrollToTop = useScrollToTop();
   const currentYear = useMemo(() => new Date().getFullYear(), []);
   return (
     <footer className="padding-i-1 padding-b-1half">
@@ -17,22 +19,43 @@ export default function Footer() {
             <h3>The Meticulous Manicurist</h3>
             <ul className="margin-bs-quarter">
               <li>
-                <Link to="/">Shop</Link>
+                <Link to="/" onClick={(e) => scrollToTop("/", e)}>
+                  Shop
+                </Link>
               </li>
               <li>
-                <Link to="/about">About</Link>
+                <Link to="/about" onClick={(e) => scrollToTop("/about", e)}>
+                  About
+                </Link>
               </li>
               <li>
-                <Link to="/training/academy">Nail Academy</Link>
+                <Link
+                  to="/training/academy"
+                  onClick={(e) => scrollToTop("/training/academy", e)}
+                >
+                  Nail Academy
+                </Link>
               </li>
               <li>
-                <Link to="/appointments">Appointments</Link>
+                <Link
+                  to="/appointments"
+                  onClick={(e) => scrollToTop("/appointments", e)}
+                >
+                  Appointments
+                </Link>
               </li>
               <li>
-                <Link to="/network-map">Network Map</Link>
+                <Link
+                  to="/network-map"
+                  onClick={(e) => scrollToTop("/network-map", e)}
+                >
+                  Network Map
+                </Link>
               </li>
               <li>
-                <Link to="/contact">Contact</Link>
+                <Link to="/contact" onClick={(e) => scrollToTop("/contact", e)}>
+                  Contact
+                </Link>
               </li>
             </ul>
           </section>
@@ -40,7 +63,9 @@ export default function Footer() {
             <h3>Info</h3>
             <ul className="margin-bs-quarter">
               <li>
-                <Link to="/faq">FAQs</Link>
+                <Link to="/faq" onClick={(e) => scrollToTop("/faq", e)}>
+                  FAQs
+                </Link>
               </li>
               <li>
                 <Link to="/nail-school">Nail School Partner Program</Link>

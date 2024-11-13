@@ -23,16 +23,14 @@ export default function Academy() {
             Podiatrists, UK Level 2 Nail Technicians, and ANY other country that
             doesn’t require licensing.
           </p>
-
-          <p className="margin-bs-half lg bold">Start your new career today!</p>
-          <a
-            href="https://academy.themeticulousmanicurist.com/online-advanced-pedicure-course/"
-            className="btn-primary btn-primary__inverted margin-bs-quarter"
-          >
-            Enroll now
-          </a>
-          <div className="margin-bs-1">
-            <AcademyPayment />
+          <div className="ta-cen margin-bs-1">
+            <p className="lg bold">Start your new career today!</p>
+            <a
+              href="https://academy.themeticulousmanicurist.com/online-advanced-pedicure-course/"
+              className="btn-primary btn-primary__inverted btn-primary__styled margin-bs-quarter"
+            >
+              Enroll now
+            </a>
           </div>
         </div>
 
@@ -77,7 +75,16 @@ export default function Academy() {
         <div className="margin-bs-2">
           <div className="grid two-even-col gap-1">
             <div>
-              <h2> Training Courses for Realistic Outcomes</h2>
+              <div className="img-wrapper">
+                <img
+                  src="https://academy.themeticulousmanicurist.com/wp-content/uploads/2021/08/AdobeStock_87701700-scaled-1.jpeg"
+                  alt=""
+                />
+              </div>
+              <h2 className="margin-bs-half">
+                {" "}
+                Training Courses for Realistic Outcomes
+              </h2>
               <p className="margin-bs-half">
                 Join me in building a thriving network of Nail Technicians who
                 are passionate about providing exceptional care to their
@@ -92,7 +99,13 @@ export default function Academy() {
               </p>
             </div>
             <div>
-              <h2>Built on Experience</h2>
+              <div className="img-wrapper">
+                <img
+                  src="https://academy.themeticulousmanicurist.com/wp-content/uploads/2022/08/DSC_0730-1.jpg"
+                  alt=""
+                />
+              </div>
+              <h2 className="margin-bs-half">Built on Experience</h2>
               <p className="margin-bs-half">
                 Immerse yourself in the world of nail technology and become an
                 expert in the field. With years of experience, “The Meticulous
@@ -110,13 +123,13 @@ export default function Academy() {
           </div>
           <a
             href="https://academy.themeticulousmanicurist.com/online-nail-technician-courses/"
-            className="btn-primary btn-primary__inverted margin-bs-1 margin-i-auto display-block maxw-fit"
+            className="btn-primary btn-primary__inverted btn-primary__styled margin-bs-1 margin-i-auto display-block maxw-fit"
           >
             All Classes
           </a>
         </div>
       </div>
-      <div className="margin-bs-2 bg-accent padding-b-1half">
+      <div className="margin-bs-2 bg-grade padding-b-1half">
         <div className="wrapper">
           <h2 className="ta-cen">
             All Challenges as a Nail Technician are Solved with our{" "}
@@ -146,6 +159,66 @@ export default function Academy() {
               course allows you to watch, re-watch, and internalize lessons to
               deliver unparalleled care to your clientele.
             </p>
+            <ul className="row margin-bs-1 gap-half jc-cen fw-wrap course-list">
+              <li className="course-item small bg-accent text-neutral-100 padding-i-1two padding-b-half minw-fit">
+                Revolutionize Client Care
+              </li>
+              <li className="course-item small bg-accent text-neutral-100 padding-i-1two padding-b-half minw-fit">
+                Compassionate Service
+              </li>
+              <li className="course-item small bg-accent text-neutral-100 padding-i-1two padding-b-half minw-fit">
+                Health and Safety Mastery
+              </li>
+              <li className="course-item small bg-accent text-neutral-100 padding-i-1two padding-b-half minw-fit">
+                Visual Learning for Confidence Building
+              </li>
+              <li className="course-item small bg-accent text-neutral-100 padding-i-1two padding-b-half minw-fit">
+                Filling Appointment Gaps
+              </li>
+              <li className="course-item small bg-accent text-neutral-100 padding-i-1two padding-b-half minw-fit">
+                Career Vision and Financial Security
+              </li>
+              <li className="course-item small bg-accent text-neutral-100 padding-i-1two padding-b-half minw-fit">
+                Product Expertise
+              </li>
+              <li className="course-item small bg-accent text-neutral-100 padding-i-1two padding-b-half minw-fit">
+                Beyond Basic Wellness Pedicures
+              </li>
+              <li className="course-item small bg-accent text-neutral-100 padding-i-1two padding-b-half minw-fit">
+                Technique Enhancement
+              </li>
+            </ul>
+            <p className="margin-bs-1">
+              Struggling with gaps in your appointment book? Our training
+              provides the skills you need to revitalize your business and keep
+              clients coming back.
+            </p>
+            <p className="margin-bs-half">
+              Feeling stuck in your career? Our course helps you see the bigger
+              picture, guiding you towards a path of financial stability and
+              professional satisfaction.
+            </p>
+            <p className="margin-bs-half">
+              Gain in-depth knowledge about the best products for every
+              treatment. Understand the nuances of nail art products and
+              maximize manicure longevity.
+            </p>
+            <p className="margin-bs-half">
+              Ready to expand your knowledge past the basics? Although we cover
+              the essentials of a stellar pedicure service, our course also
+              delves into specialized techniques for treating various nail
+              conditions like pincer nails, ram’s horn nails, ingrown nails,
+              thickening, discoloration, and fungal issues.
+            </p>
+            <p className="margin-bs-half">
+              Perfect your techniques with hands-on training. Learn from
+              detailed tutorials on nail polish application, nail art designs,
+              and artificial nail application.
+            </p>
+            <div className="margin-bs-1 grid jc-cen gap-half">
+              <h3 className="ta-cen">Enroll now!</h3>
+              <AcademyPayment />
+            </div>
           </div>
         </div>
       </div>
@@ -154,23 +227,26 @@ export default function Academy() {
           <h2>Meticulous Manicurist Mission Statement</h2>
           <div className="margin-bs-1">
             <p>
-              Meticulous Manicurist Mission Statement At the Meticulous
-              Manicurist Online Nail Academy, we are dedicated to empowering
-              individuals to transform the world of nail care. Led by Lori
-              Halloway, a globally recognized leader with 30 years of
+              At the Meticulous Manicurist Online Nail Academy, we are dedicated
+              to empowering individuals to transform the world of nail care. Led
+              by Lori Halloway, a globally recognized leader with 30 years of
               experience, our academy provides premium, transformative education
               that inspires both aspiring and seasoned nail technicians to
-              achieve professional excellence. Our mission is to empower our
-              students with unparalleled skills and knowledge, enabling them to
-              deliver exceptional care and bring hope and comfort to their
-              clients. Through our diverse course offerings, from wellness
-              pedicures to specialized restorative treatments, we aim to meet
-              the diverse needs of our clientele and ensure our graduates are
-              highly sought after in the industry. Our academy stands for
-              innovation, quality, and the relentless pursuit of excellence in
-              nail technology, inspiring our students to not only succeed
-              professionally but also make a meaningful impact in the lives of
-              others.
+              achieve professional excellence.
+            </p>
+            <p className="margin-bs-half">
+              Our mission is to empower our students with unparalleled skills
+              and knowledge, enabling them to deliver exceptional care and bring
+              hope and comfort to their clients. Through our diverse course
+              offerings, from wellness pedicures to specialized restorative
+              treatments, we aim to meet the diverse needs of our clientele and
+              ensure our graduates are highly sought after in the industry.
+            </p>
+            <p className="margin-bs-half">
+              Our academy stands for innovation, quality, and the relentless
+              pursuit of excellence in nail technology, inspiring our students
+              to not only succeed professionally but also make a meaningful
+              impact in the lives of others.
             </p>
           </div>
         </div>
