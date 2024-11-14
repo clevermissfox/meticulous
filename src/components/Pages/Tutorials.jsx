@@ -25,7 +25,13 @@ export default function Tutorials() {
         }
       );
 
-      setVideos((prevVideos) => [...prevVideos, ...response.data.items]);
+      // Ensure videos are not duplicated
+      if (pageToken === "") {
+        setVideos(response.data.items);
+      } else {
+        setVideos((prevVideos) => [...prevVideos, ...response.data.items]);
+      }
+
       setNextPageToken(response.data.nextPageToken);
     } catch (error) {
       console.error("Error fetching videos:", error);

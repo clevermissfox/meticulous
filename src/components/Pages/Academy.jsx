@@ -17,20 +17,29 @@ export default function Academy() {
             online pedicure & manicure training
           </p>
         </hgroup>
-        <div className="margin-bs-1">
-          <p>
-            Open to Licensed US Nail Technicians, Cosmetologists, Nurses,
-            Podiatrists, UK Level 2 Nail Technicians, and ANY other country that
-            doesn’t require licensing.
-          </p>
-          <div className="ta-cen margin-bs-1">
-            <p className="lg bold">Start your new career today!</p>
-            <a
-              href="https://academy.themeticulousmanicurist.com/online-advanced-pedicure-course/"
-              className="btn-primary btn-primary__inverted btn-primary__styled margin-bs-quarter"
-            >
-              Enroll now
-            </a>
+        <div className="margin-bs-1 grid gap-1 two-even-col">
+          <div className="grid ac-cen ta-cen order-2">
+            <p>
+              Open to Licensed US Nail Technicians, Cosmetologists, Nurses,
+              Podiatrists, UK Level 2 Nail Technicians, and ANY other country
+              that doesn’t require licensing.
+            </p>
+            <div className="ta-cen margin-bs-1">
+              <p className="lg bold">Start your new career today!</p>
+              <a
+                href="https://academy.themeticulousmanicurist.com/online-advanced-pedicure-course/"
+                className="btn-primary btn-primary__inverted btn-primary__styled margin-bs-quarter"
+              >
+                Enroll now
+              </a>
+            </div>
+          </div>
+          <div className="order-1">
+            <img
+              className="br-default w-100 height-100 cover"
+              src="https://academy.themeticulousmanicurist.com/wp-content/uploads/2023/01/three-ladies_web.jpg"
+              alt=""
+            />
           </div>
         </div>
 
@@ -220,9 +229,119 @@ export default function Academy() {
               <AcademyPayment />
             </div>
           </div>
+
+          <div className="card-inner margin-bs-1">
+            <h2 className="ta-cen">
+              What is a <span className="text-accent">STAR</span> Nail
+              Technician?
+            </h2>
+            <p className="margin-bs-half">
+              A STAR Nail Technician is a prestigious title and advanced level
+              designation, symbolizing excellence and expertise in nail care.
+              STAR stands for Specialty Toenail and Restoration Nail Technician,
+              representing the pinnacle of advanced techniques in nail care.
+            </p>
+            <p className="margin-bs-half">
+              {" "}
+              Our STAR Nail Technicians acquire the skills and knowledge to
+              restore the esthetic beauty of even the most challenging toenails
+              and <strong>ensure patron protection</strong>. They don’t just
+              provide cosmetic solutions; they offer genuine relief from
+              discomfort and instill hope in clients who have long suffered from
+              neglected toenail conditions
+            </p>
+          </div>
         </div>
       </div>
       <div className="wrapper">
+        <div className="row fw-wrap gap-1 margin-bs-2">
+          <div className="card bg-accent text-neutral-100 flex-1 container">
+            <div className=" cards-courses grid gap-1">
+              <img
+                className="w-100 cover br-default"
+                src="https://academy.themeticulousmanicurist.com/wp-content/uploads/2022/08/pedicure4-resize_white.jpg"
+                alt=""
+              />
+              <div className="cards-content">
+                <hgroup>
+                  <h2>STAR NT Pedicure Certification </h2>
+                  <p className="thin lowercase">nail technicians</p>
+                </hgroup>
+                <p>
+                  This comprehensive 22-hour training program will empower you
+                  with the skills for unparalleled success. There is no other
+                  pedicure training experience like it available. Explore the
+                  detailed training modules by clicking 'Learn More.' Delve deep
+                  into the nuances of staying within the scope of practice,
+                  effectively addressing ingrown toenails, and ensuring your
+                  well-being with correct body ergonomics. Master the
+                  intricacies of catering to a diverse clientele, from handling
+                  elderly toenail changes to understanding essential business
+                  dynamics and beyond. Earn your sought-after title as a
+                  Specialty Toenail and Restoration Nail Technician, and unlock
+                  an exclusive opportunity to receive client referrals from our
+                  Meticulous Manicurist Network Map.*{" "}
+                </p>
+                <p className="small margin-bs-1">
+                  *Map Placement isn’t included in course price and must meet
+                  state guidelines to be listed.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="card bg-accent text-neutral-100 flex-1 container">
+            <div className=" cards-courses grid gap-1">
+              <img
+                className="w-100 cover br-default"
+                src="https://academy.themeticulousmanicurist.com/wp-content/uploads/2022/08/caregiver-pedicure-3-resize_new-color.jpg"
+                alt=""
+              />
+              <div className="cards-content">
+                <hgroup>
+                  <h2>Caregiver Training</h2>
+                  <p className="thin lowercase">foot care nurses</p>
+                </hgroup>
+                <p>
+                  Unleash the heroic potential within you! Embark on our Foot
+                  Care Nurse course and triumph over any toenail troubles like a
+                  pro. Use your newfound skills to bring joy and comfort to
+                  those in need. Take charge confidently and master safe and
+                  effective techniques to restore dignity and alleviate
+                  discomfort. Whether you care for a loved one or are a
+                  professional caregiver, let us empower you to become a beacon
+                  of inspiration in the field of foot care. Foot Care Nurses who
+                  have taken the course boast they learned more in this course
+                  than they did in Nursing School.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="card container bg-accent text-neutral-100 flex-1">
+            <div className="cards-courses grid gap-1">
+              <img
+                className="w-100 cover br-default"
+                src="https://academy.themeticulousmanicurist.com/wp-content/uploads/2022/08/self-manicure-resize_pink.jpg"
+                alt=""
+              />
+              <div className="cards-content">
+                <hgroup>
+                  <h2>Individual Courses</h2>
+                  <p className="thin lowercase">nail technician</p>
+                </hgroup>
+                <p>
+                  Transform your nail service menu one step at a time. By
+                  mastering each category, you can elevate your skills and
+                  progress to the next level at your own pace. Discover the best
+                  techniques for pedicures, learn how to clean ingrown toenails,
+                  and revive thickened toenails to enhance your clients' nail
+                  appearance. Looking to broaden your skills with Acrylic Nails?
+                  Our courses empower you with the tools to exceed client
+                  expectations and create a loyal following.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="card margin-bs-2 bg-accent text-neutral-100">
           <h2>Meticulous Manicurist Mission Statement</h2>
           <div className="margin-bs-1">
