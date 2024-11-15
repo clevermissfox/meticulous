@@ -389,31 +389,34 @@ export default function Academy() {
         </div>
       </div>
       <div className="wrapper">
-        <div className="card margin-bs-2 bg-accent text-neutral-100">
-          <h2>Meticulous Manicurist Mission Statement</h2>
-          <div className="margin-bs-1">
-            <p>
-              At the Meticulous Manicurist Online Nail Academy, we are dedicated
-              to empowering individuals to transform the world of nail care. Led
-              by Lori Halloway, a globally recognized leader with 30 years of
-              experience, our academy provides premium, transformative education
-              that inspires both aspiring and seasoned nail technicians to
-              achieve professional excellence.
-            </p>
-            <p className="margin-bs-half">
-              Our mission is to empower our students with unparalleled skills
-              and knowledge, enabling them to deliver exceptional care and bring
-              hope and comfort to their clients. Through our diverse course
-              offerings, from wellness pedicures to specialized restorative
-              treatments, we aim to meet the diverse needs of our clientele and
-              ensure our graduates are highly sought after in the industry.
-            </p>
-            <p className="margin-bs-half">
-              Our academy stands for innovation, quality, and the relentless
-              pursuit of excellence in nail technology, inspiring our students
-              to not only succeed professionally but also make a meaningful
-              impact in the lives of others.
-            </p>
+        <div className="card margin-bs-2 bg-accent ">
+          <div className="card-inner">
+            <h2>Meticulous Manicurist Mission Statement</h2>
+            <div className="margin-bs-1">
+              <p>
+                At the Meticulous Manicurist Online Nail Academy, we are
+                dedicated to empowering individuals to transform the world of
+                nail care. Led by Lori Halloway, a globally recognized leader
+                with 30 years of experience, our academy provides premium,
+                transformative education that inspires both aspiring and
+                seasoned nail technicians to achieve professional excellence.
+              </p>
+              <p className="margin-bs-half">
+                Our mission is to empower our students with unparalleled skills
+                and knowledge, enabling them to deliver exceptional care and
+                bring hope and comfort to their clients. Through our diverse
+                course offerings, from wellness pedicures to specialized
+                restorative treatments, we aim to meet the diverse needs of our
+                clientele and ensure our graduates are highly sought after in
+                the industry.
+              </p>
+              <p className="margin-bs-half">
+                Our academy stands for innovation, quality, and the relentless
+                pursuit of excellence in nail technology, inspiring our students
+                to not only succeed professionally but also make a meaningful
+                impact in the lives of others.
+              </p>
+            </div>
           </div>
         </div>
       </div>

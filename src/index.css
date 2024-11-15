@@ -894,6 +894,7 @@ strong {
   &:is(:hover, :focus-visible) {
     --grade-start: var(--clr-accent);
     --grade-end: var(--clr-brand);
+    --grade-border: currentColor;
     color: var(--clr-neutral-100);
   }
 
@@ -914,10 +915,6 @@ strong {
     border-radius: var(--br-default);
     padding: 0.5em 1.2em;
     text-transform: lowercase;
-
-    &:is(:hover, :focus-visible) {
-      --grade-border: var(--clr-neutral-100);
-    }
   }
 }
 

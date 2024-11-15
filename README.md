@@ -15,3 +15,7 @@ Dont forget to include the graduate testimonial. make a new slider? repurpose th
 ### Tutorials Page
 
 Add API Key to an .env file
+
+### Styles
+
+Check all the buttons on different bgs (white on pink, pink on white, white on white, pink on pink) and their hover/focus states
