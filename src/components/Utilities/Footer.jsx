@@ -15,7 +15,7 @@ export default function Footer() {
         </p>
 
         <nav className="section-footer_menu row jc-sb gap-1">
-          <section aria-label="Internal Links">
+          <section aria-label="Internal Links" className="card-inner flex-1">
             <h3>The Meticulous Manicurist</h3>
             <ul className="margin-bs-quarter">
               <li>
@@ -59,7 +59,7 @@ export default function Footer() {
               </li>
             </ul>
           </section>
-          <section aria-label="Find More Info">
+          <section aria-label="Find More Info" className="card-inner flex-1">
             <h3>Info</h3>
             <ul className="margin-bs-quarter">
               <li>
@@ -78,7 +78,7 @@ export default function Footer() {
               </li>
             </ul>
           </section>
-          <section aria-label="Resources">
+          <section aria-label="Resources" className="card-inner flex-1">
             <h3>Associated Websites</h3>
             <ul className="margin-bs-quarter">
               <li>

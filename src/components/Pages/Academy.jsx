@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import AcademyPayment from "../Utilities/AcademyPayment";
 
 export default function Academy() {
@@ -48,7 +49,7 @@ export default function Academy() {
             The Meticulous Manicurist Methods
           </h2>
           <ul className="row fw-wrap margin-bs-1 gap-1">
-            <li className="card bg-neutral-100">
+            <li className="card  bg-neutral-100">
               <h3 className=" lowercase">Premium Training</h3>
               <p className="margin-bs-1">
                 Unlock the secrets of unparalleled nail technology with our
@@ -80,62 +81,6 @@ export default function Academy() {
               </p>
             </li>
           </ul>
-        </div>
-        <div className="margin-bs-2">
-          <div className="grid two-even-col gap-1">
-            <div>
-              <div className="img-wrapper">
-                <img
-                  src="https://academy.themeticulousmanicurist.com/wp-content/uploads/2021/08/AdobeStock_87701700-scaled-1.jpeg"
-                  alt=""
-                />
-              </div>
-              <h2 className="margin-bs-half">
-                {" "}
-                Training Courses for Realistic Outcomes
-              </h2>
-              <p className="margin-bs-half">
-                Join me in building a thriving network of Nail Technicians who
-                are passionate about providing exceptional care to their
-                clients. Say goodbye to turning clients away and hello to
-                meeting the needs of every individual. From Regular Wellness
-                Pedicures to Specialized Restorative Pedicures, the techniques I
-                teach cover everything in between. With a staggering 313 million
-                channel views, it’s evident that the public trusts our
-                expertise. Nail technicians trained under the Meticulous
-                Manicurist banner are highly sought-after, representing the
-                ultimate gold standard of care and assurance.
-              </p>
-            </div>
-            <div>
-              <div className="img-wrapper">
-                <img
-                  src="https://academy.themeticulousmanicurist.com/wp-content/uploads/2022/08/DSC_0730-1.jpg"
-                  alt=""
-                />
-              </div>
-              <h2 className="margin-bs-half">Built on Experience</h2>
-              <p className="margin-bs-half">
-                Immerse yourself in the world of nail technology and become an
-                expert in the field. With years of experience, “The Meticulous
-                Manicurist” Lori Halloway offers advanced techniques that are
-                innovative and transformative. Whether you’re a beginner or an
-                experienced professional, our academy provides personalized
-                guidance and expert insights to help you elevate your craft.
-                Learn and master the art of pedicures, ensuring every moment
-                with a client exudes excellence. These techniques and results
-                are sure to impress! Plus, our course respects the National
-                Occupational Standards in the UK, making it easy to obtain
-                insurance with your certification.
-              </p>
-            </div>
-          </div>
-          <a
-            href="https://academy.themeticulousmanicurist.com/online-nail-technician-courses/"
-            className="btn-primary btn-primary__inverted btn-primary__styled margin-bs-1 margin-i-auto display-block maxw-fit"
-          >
-            All Classes
-          </a>
         </div>
       </div>
       <div className="margin-bs-2 bg-grade padding-b-1half">
@@ -254,20 +199,87 @@ export default function Academy() {
         </div>
       </div>
       <div className="wrapper">
-        <div className="row fw-wrap gap-1 margin-bs-2">
-          <div className="card bg-accent text-neutral-100 flex-1 container">
+        <div className="margin-bs-2">
+          <div className="grid two-even-col gap-1">
+            <div>
+              <div className="img-wrapper">
+                <img
+                  src="https://academy.themeticulousmanicurist.com/wp-content/uploads/2021/08/AdobeStock_87701700-scaled-1.jpeg"
+                  alt=""
+                />
+              </div>
+              <h2 className="margin-bs-half">
+                Training Courses for Realistic Outcomes
+              </h2>
+              <p className="margin-bs-half">
+                Join me in building a thriving network of Nail Technicians who
+                are passionate about providing exceptional care to their
+                clients. Say goodbye to turning clients away and hello to
+                meeting the needs of every individual. From Regular Wellness
+                Pedicures to Specialized Restorative Pedicures, the techniques I
+                teach cover everything in between. With a staggering 313 million
+                channel views, it’s evident that the public trusts our
+                expertise. Nail technicians trained under the Meticulous
+                Manicurist banner are highly sought-after, representing the
+                ultimate gold standard of care and assurance.
+              </p>
+              <Link
+                to="/classes"
+                className="margin-bs-half margin-i-auto display-block maxw-fit btn-primary btn-primary__styled"
+              >
+                All courses
+              </Link>
+            </div>
+            <div>
+              <div className="img-wrapper">
+                <img
+                  src="https://academy.themeticulousmanicurist.com/wp-content/uploads/2022/08/DSC_0730-1.jpg"
+                  alt=""
+                />
+              </div>
+              <h2 className="margin-bs-half">Built on Experience</h2>
+              <p className="margin-bs-half">
+                Immerse yourself in the world of nail technology and become an
+                expert in the field. With years of experience, “The Meticulous
+                Manicurist” Lori Halloway offers advanced techniques that are
+                innovative and transformative. Whether you’re a beginner or an
+                experienced professional, our academy provides personalized
+                guidance and expert insights to help you elevate your craft.
+                Learn and master the art of pedicures, ensuring every moment
+                with a client exudes excellence. These techniques and results
+                are sure to impress! Plus, our course respects the National
+                Occupational Standards in the UK, making it easy to obtain
+                insurance with your certification.
+              </p>
+              <Link
+                to="/about"
+                className="margin-bs-half margin-i-auto display-block maxw-fit btn-primary btn-primary__styled"
+              >
+                About Lori
+              </Link>
+            </div>
+          </div>
+          {/* <a
+            href="https://academy.themeticulousmanicurist.com/online-nail-technician-courses/"
+            className="btn-primary btn-primary__inverted btn-primary__styled margin-bs-1 margin-i-auto display-block maxw-fit"
+          >
+            All Classes
+          </a> */}
+        </div>
+        <div className="grid gap-1 margin-bs-2">
+          <div className="card bg-accent text-neutral-100 container ">
             <div className=" cards-courses grid gap-1">
               <img
-                className="w-100 cover br-default"
+                className="w-100 height-100 cover br-default"
                 src="https://academy.themeticulousmanicurist.com/wp-content/uploads/2022/08/pedicure4-resize_white.jpg"
                 alt=""
               />
               <div className="cards-content">
                 <hgroup>
-                  <h2>STAR NT Pedicure Certification </h2>
+                  <h3>STAR NT Pedicure Certification </h3>
                   <p className="thin lowercase">nail technicians</p>
                 </hgroup>
-                <p>
+                <p className="margin-bs-1">
                   This comprehensive 22-hour training program will empower you
                   with the skills for unparalleled success. There is no other
                   pedicure training experience like it available. Explore the
@@ -286,22 +298,28 @@ export default function Academy() {
                   *Map Placement isn’t included in course price and must meet
                   state guidelines to be listed.
                 </p>
+                <a
+                  href="https://academy.themeticulousmanicurist.com/online-advanced-pedicure-course/"
+                  className="btn-primary btn-primary__styled margin-bs-half"
+                >
+                  learn more
+                </a>
               </div>
             </div>
           </div>
-          <div className="card bg-accent text-neutral-100 flex-1 container">
+          <div className="card bg-accent text-neutral-100 container ">
             <div className=" cards-courses grid gap-1">
               <img
-                className="w-100 cover br-default"
+                className="w-100 height-100 cover br-default"
                 src="https://academy.themeticulousmanicurist.com/wp-content/uploads/2022/08/caregiver-pedicure-3-resize_new-color.jpg"
                 alt=""
               />
               <div className="cards-content">
                 <hgroup>
-                  <h2>Caregiver Training</h2>
+                  <h3>Caregiver Training</h3>
                   <p className="thin lowercase">foot care nurses</p>
                 </hgroup>
-                <p>
+                <p className="margin-bs-1">
                   Unleash the heroic potential within you! Embark on our Foot
                   Care Nurse course and triumph over any toenail troubles like a
                   pro. Use your newfound skills to bring joy and comfort to
@@ -313,22 +331,28 @@ export default function Academy() {
                   have taken the course boast they learned more in this course
                   than they did in Nursing School.
                 </p>
+                <a
+                  href="http://pedicuretraining.com/athometraining"
+                  className="btn-primary btn-primary__styled margin-bs-half"
+                >
+                  learn more
+                </a>
               </div>
             </div>
           </div>
-          <div className="card container bg-accent text-neutral-100 flex-1">
+          <div className="card container bg-accent text-neutral-100">
             <div className="cards-courses grid gap-1">
               <img
-                className="w-100 cover br-default"
+                className="w-100 height-100 cover br-default"
                 src="https://academy.themeticulousmanicurist.com/wp-content/uploads/2022/08/self-manicure-resize_pink.jpg"
                 alt=""
               />
               <div className="cards-content">
                 <hgroup>
-                  <h2>Individual Courses</h2>
+                  <h3>Individual Courses</h3>
                   <p className="thin lowercase">nail technician</p>
                 </hgroup>
-                <p>
+                <p className="margin-bs-1">
                   Transform your nail service menu one step at a time. By
                   mastering each category, you can elevate your skills and
                   progress to the next level at your own pace. Discover the best
@@ -338,10 +362,33 @@ export default function Academy() {
                   Our courses empower you with the tools to exceed client
                   expectations and create a loyal following.
                 </p>
+
+                <a
+                  href="https://academy.themeticulousmanicurist.com/online-nail-technician-courses/"
+                  className="btn-primary btn-primary__styled margin-bs-half"
+                >
+                  learn more
+                </a>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <div className="margin-bs-2 bg-grade padding-b-1half">
+        <div className="wrapper">
+          <h2 className="ta-cen text-neutral-100">
+            What Graduates Have to Say
+          </h2>
+          <div className="card-inner margin-bs-1"></div>
+          <a
+            href="https://academy.themeticulousmanicurist.com/online-advanced-pedicure-course/"
+            className="btn-primary btn-primary__styled margin-bs-half margin-i-auto display-block maxw-fit"
+          >
+            Course details
+          </a>
+        </div>
+      </div>
+      <div className="wrapper">
         <div className="card margin-bs-2 bg-accent text-neutral-100">
           <h2>Meticulous Manicurist Mission Statement</h2>
           <div className="margin-bs-1">
